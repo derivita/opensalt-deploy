@@ -79,6 +79,19 @@ services:
     volumes:
       - caddy_data:/data/caddy
       - caddy_config:/config/caddy
+    ports:
+      # HTTP
+      - target: 80
+        published: 8080
+        protocol: tcp
+      # HTTPS
+      - target: 443
+        published: 8443
+        protocol: tcp
+      # HTTP/3
+      - target: 443
+        published: 8443
+        protocol: udp
     networks:
       default:
       # Uncomment this and the networks section below if attaching to an existing external network
