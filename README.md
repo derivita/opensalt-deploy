@@ -14,7 +14,7 @@ Installation
 * Clone this repository
 
 * Copy `.env.dist` to `.env`
- 
+
 * Update `.env` as desired
 
 * Create a volume for the mysql data using `docker volume create --name=opensalt-mysql-data`
@@ -34,5 +34,5 @@ Installation
   `docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' opensalt_web_1`
   (replacing _opensalt_ with the value of _COMPOSE_PROJECT_NAME_ in `.env` if changed)
 
-* Go to `http://<IP of container>/` to get to the initial page
+* Go to `http://localhost:8080/` to get to the initial page
 
